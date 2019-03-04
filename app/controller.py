@@ -94,7 +94,7 @@ def login_account():
     view.enter_user_name()
     username=input()
     view.enter_password()
-    password=input()            
+    password=getpass.getpass()           
     enteraccount=loginaccount.login(username,password)
     if enteraccount is None:
         view.login_failed_message()
